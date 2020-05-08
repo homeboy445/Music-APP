@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top,#1E9600,#FFF200,#FF0000); 
+    filter:blur(0.7px);
+}
+.app
+{
+height:100vh;
+display:flex;
+position:relative;
+justify-content: space-between;
+align-items:center;
+flex-direction:column;
+}
+header p
+{
+    font-size:20px;
+    letter-spacing:5px;
+    cursor:none;
+}
+.pads
+{
+    background:rgb(40, 117, 233);
+    width:100%;
+    display:flex;
+    cursor:pointer;
+}
+.pads > div
+{
+    width:100px;
+    height:100px;
+    flex:1;
+}
+.pad1
+{
+background:rgb(245, 4, 4);
+}
+.pad2
+{
+background:rgb(216, 240, 7);
+}
+.pad3
+{
+background:rgb(12, 245, 12);
+}
+.pad4
+{
+background:rgb(5, 179, 170);
+}
+.pad5
+{
+background:rgb(12, 47, 245);
+}
+.pad6
+{
+background:rgb(226, 12, 245);
+}
+.visual > div
+{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    bottom:0%;
+    left:20%;
+    bottom:0%;
+}
+@keyframes jump
+{
+    0%
+    {
+        bottom:0%;
+        left:20%
+    }
+    50%
+    {
+        bottom:50%;
+        left:50%;
+    }
+    100%
+    {
+        bottom:0%;
+        left:80%;
+    }
+}
+.visual > div
+{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    bottom:0%;
+    z-index:-1;
+}
+header h1
+{
+    margin:50px 0px 50px 0px;
+    font-size:80px;
+    cursor:none;
+    font-weight:800;
+    text-align: center;
+    color:transparent;
+    background-image:linear-gradient(to left,rgb(252, 9, 9),rgb(212, 234, 18),rgb(107, 145, 250),rgb(8, 185, 255),rgb(198, 18, 234),rgb(119, 18, 234),#13fdf5);
+    -webkit-background-clip:text;
+    background-size: 1000%;
+    animation:animate 15s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position:0% 100%;
+    }
+    50%
+    {
+        background-position:100% 0%;
+    }
+    100%
+    {
+        background-position:0% 100%;
+    }
+}
+.name
+{
+    font-family: 'Dancing Script', cursive;
+    font-size:30px;
+}
+.btn1
+{
+   position:absolute;
+   right:0;
+   top:0;
+   width:80px;
+   height:33px;
+   background:linear-gradient(to right,#a8ff78,#78ffd6);
+   color:rgb(233, 33, 33);
+   border:2px solid black;
+   font-weight:300;
+   font-size:20px;
+   margin:10px 10px;
+}
+.ol
+{
+    padding:0px 4px 6px 0px;
+}
+.btn1:hover{
+    color:blue;
+}
+.status
+{
+    position:absolute;
+    left:0;
+}
+#popup
+{
+    position:fixed;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:700px;
+    height:400px;
+    padding:50px;
+    box-shadow: 0px 5px 30px rgb(255, 11, 194);
+    background:linear-gradient(to right,#8A2387,#E94057,#F27121);
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+#popup.active
+{
+    top:50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+.app#ok.active
+{
+    filter:blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+.btn2
+{  width:80px;
+   height:40px;
+   background:linear-gradient(to right,#12c2e9,#c471ed,#f64f59);
+   color:rgb(221, 215, 215);
+   border:2px solid black;
+   font-size:25px;
+   font-weight:200;
+   cursor:pointer;
+}
